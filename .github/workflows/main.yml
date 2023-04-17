@@ -14,4 +14,4 @@ jobs:
           ref: main
  
       - name: Trigger Workflow
-        uses: ./.github/workflows/main.yml
+        uses: ./.github/workflows/build.yml
