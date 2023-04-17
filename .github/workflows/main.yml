@@ -10,6 +10,6 @@ jobs: null
       uses: peter-evans/repository-dispatch@v1
       with: null
         repository: patilswati98/demo-2
-        token: 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
+        token: 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
         event-type: call-my-workflow
-        client-payload: "hello":"team"
+        client-payload: '{"my_input_param": "input_value"}'
