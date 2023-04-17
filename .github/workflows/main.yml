@@ -1,8 +1,6 @@
-name: Trigger Workflow
- 
+name: Trigger Workflow 
 on:
   workflow_dispatch:
- 
 jobs:
   trigger_workflow:
     runs-on: ubuntu-latest
@@ -12,6 +10,5 @@ jobs:
         with:
           repository: patilswati98/demo-2
           ref: main
- 
       - name: Trigger Workflow
         uses: ./.github/workflows/build.yml
