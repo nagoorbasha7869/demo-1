@@ -1,12 +1,10 @@
-name: Trigger Workflow 
+---
 on:
-  workflow_dispatch:
-jobs:
-  trigger_workflow:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-        with:
-          repository: patilswati98/demo-2
-          ref: main
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: Log level
+        required: true
+        default: warning
+      tags:
+        description: Test scenario tags
