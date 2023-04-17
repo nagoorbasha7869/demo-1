@@ -2,7 +2,7 @@ name: My Workflow 
 on:
   push:
     branches:
-      - main
+      - main
 jobs:
   my-job:
     runs-on: ubuntu-latest
@@ -10,7 +10,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
  
-      - name: Get commit IDs
+      - name: Get commit Id
         run: git rev-list --max-count=10 HEAD
 
 
