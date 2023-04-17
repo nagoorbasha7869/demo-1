@@ -12,4 +12,4 @@ jobs: null
         repository: patilswati98/demo-2
         token: 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
         event-type: call-my-workflow
-        client-payload: '{​​​​​"my_input_param": "input_value"}​​​​​'
+        client-payload: "hello":"team"
