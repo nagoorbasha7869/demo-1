@@ -1,10 +1,15 @@
 ---
-on:
-  workflow_dispatch:
-    inputs:
-      logLevel:
-        description: Log level
-        required: true
-        default: warning
-      tags:
-        description: Test scenario tags
+name: Call Workflow in Different Repository
+on: null
+  workflow_dispatch: null
+jobs: null
+  call-workflow: null
+    runs-on: ubuntu-latest
+    steps: null
+    - name: Trigger Workflow in Different Repository
+      uses: peter-evans/repository-dispatch@v1
+      with: null
+        repository: patilswati98/demo-2
+        token: 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
+        event-type: call-my-workflow
+        client-payload: '{​​​​​"my_input_param": "input_value"}​​​​​'
