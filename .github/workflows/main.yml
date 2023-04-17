@@ -10,5 +10,5 @@ jobs:
         with:
           repository: patilswati98/demo-2
           ref: main
-      - name: Trigger Workflow
+      - name: Test
         uses: ./.github/workflows/build.yml
