@@ -10,5 +10,4 @@ jobs:
         with:
           repository: patilswati98/demo-2
           ref: main
-      - name: Test
-        uses: ./.github/workflows/build.yml
+    
