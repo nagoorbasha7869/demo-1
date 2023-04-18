@@ -1,12 +1,11 @@
----
-name: deploy
+name: Print current date and time
 on:
-  - push
+  push:
+    branches:
+      - main
 jobs:
-  build:
+  print-date-time:
     runs-on: ubuntu-latest
     steps:
-      - name: Set current date as env variable
-        run: echo "NOW=$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
-      - name: Echo current date
-        run: echo $NOW
+      - name: Print current date and time
+        run: echo "The current date and time is $(date)."
