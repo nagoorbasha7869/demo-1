@@ -1,12 +1,12 @@
-name: CI
-on: workflow_dispatch
+name: Get branch name
+on:
+  push:
+    branches: [main]
 jobs:
-  build:
+  get-branch-name:
     runs-on: ubuntu-latest
     steps:
-      - name: Git checkout
-        uses: actions/checkout@v1
-      - name: Branch name
-        run: echo running on branch ${GITHUB_REF##*/}
-      - name: Build
-        run: docker build -t tedmiston/tag-example:${GITHUB_REF##*/} .
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Show branch name
+        run: echo "The branch name is $GITHUB_REF"
